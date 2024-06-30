@@ -6,6 +6,11 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("== 명언 앱 ==");
 
+        int num = 1;
+        String[] a = new String[100];
+        String[] b = new String[100];
+        int size = a.length;
+
         while(true) {
             System.out.print("명령) ");
             String command = scan.nextLine();
@@ -15,12 +20,23 @@ public class Main {
             }
 
             else if(command.equals("등록")) {
-                System.out.print("명언 : ");
-                String a = scan.nextLine();
-                System.out.print("작가 : ");
-                String b = scan.nextLine();
+                for(int i = 0; i < size; i++) {
+                    System.out.print("명언 : ");
+                    a[i] = scan.nextLine();
+                    System.out.print("작가 : ");
+                    b[i] = scan.nextLine();
+
+                    System.out.println(num++ + "번 명언이 등록되었습니다.");
+                }
             }
-            System.out.println("번 명언");
+
+            else if(command.equals("목록")) {
+                System.out.println("번호 / 작가 / 명언");
+                System.out.println("------------------");
+                for(int i = 0; i < size; i++) {
+                    System.out.println(i + " / " + a[1] + " / " + b[1]);
+                }
+            }
 
         }
     }
