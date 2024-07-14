@@ -9,6 +9,7 @@ public class Main {
 
         ArrayList <String> information1 = new ArrayList<>();
         ArrayList <String> information2 = new ArrayList<>();
+        int id = 0;
 
         while(true) {
             System.out.print("명령) ");
